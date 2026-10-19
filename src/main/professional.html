@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Logic Analyzer :: Dashboard</title>
+
+    <link href="./css/analyzer.css" rel="stylesheet">
+    </link>
+
+    <!-- Favicons -->
+    <link href="./img/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96" />
+    <link href="./img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" />
+    <link href="./img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" />
+</head>
+
+<body>
+    <div class="container">
+        <h3>Multi-Channel Logic Analyzer UI</h3>
+
+        <div class="controls-info">
+            <div>🖱️ <span class="shortcut">Mausrad:</span> Zeitachse zoomen | <span class="shortcut">Klicken &
+                    Ziehen:</span> Scrollen</div>
+            <div>⌨️ <span class="shortcut">Taste [A] oder [B] + Klick:</span> Marker setzen</div>
+        </div>
+
+        <!-- Canvas mit fester Auflösung für scharfe Renderings -->
+        <canvas id="analyzerCanvas" width="1000" height="350"></canvas>
+
+        <div class="measurements">
+            <div class="meas-box active-a">
+                <div>Marker A</div>
+                <div id="valA">--</div>
+            </div>
+            <div class="meas-box active-b">
+                <div>Marker B</div>
+                <div id="valB">--</div>
+            </div>
+            <div class="meas-box active-delta">
+                <div>Delta (B - A)</div>
+                <div id="valDelta">--</div>
+            </div>
+            <div class="meas-box active-delta">
+                <div>Frequenz</div>
+                <div id="valFreq">--</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/professional.js" type="module"></script>
+</body>
+
+</html>

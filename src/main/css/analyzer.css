@@ -1,0 +1,105 @@
+body {
+    background: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    user-select: none;
+    margin: 0;
+}
+
+h3 {
+    margin-top: 0;
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+
+canvas {
+    background: #111;
+    border: 1px solid #444;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    cursor: grab;
+}
+
+canvas:active {
+    cursor: grabbing;
+}
+
+.controls-info {
+    display: flex;
+    justify-content: space-between;
+    background: #262626;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.85em;
+    color: #b0b0b0;
+}
+
+
+.controls {
+    margin-bottom: 10px;
+}
+
+.info {
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.shortcut {
+    color: #00ff66;
+    font-weight: bold;
+}
+
+.measurements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.meas-box {
+    background: #262626;
+    padding: 12px;
+    border-radius: 4px;
+    border-left: 4px solid #333;
+}
+
+.meas-box.active-a {
+    border-left-color: #0077ff;
+}
+
+.meas-box.active-b {
+    border-left-color: #ffaa00;
+}
+
+.meas-box.active-delta {
+    border-left-color: #00ff66;
+}
+
+.meas-box div:first-child {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 0.5px;
+}
+
+.meas-box div:last-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+}

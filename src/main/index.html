@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Logic Analyzer :: Dashboard</title>
+
+    <link href="./css/analyzer.css" rel="stylesheet">
+    </link>
+
+    <!-- Favicons -->
+    <link href="./img/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96" />
+    <link href="./img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" />
+    <link href="./img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" />
+</head>
+
+<body>
+    <h1>JavaScript Logic Analyzer</h1>
+    <div class="controls">
+        <h3>Interaktiver Logikanalysator (Vorschau)</h3>
+        <p>Kanal 1: Simuliertes Taktsignal (Clock / Daten)</p>
+        <p class="info">Bedienung: <strong>Mausrad</strong> zum Zoomen | <strong>Klicken & Ziehen</strong> zum Scrollen
+        </p>
+    </div>
+
+    <canvas id="analyzerCanvas" width="1000" height="400"></canvas>
+
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>
