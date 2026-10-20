@@ -1,3 +1,6 @@
+/**
+*
+*/
 export default class Analyzer {
 
     static DATA_COLOR = '#00ffff';
