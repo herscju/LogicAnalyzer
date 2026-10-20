@@ -7,8 +7,6 @@ export default class AdvancedAnalyzer extends Analyzer {
 
     activeKeys = {};
     activeKey = null;
-    additionalKey = null;
-    numberOfKeys = 0;
     markerA = 0;
     markerB = 0;
 
@@ -24,14 +22,11 @@ export default class AdvancedAnalyzer extends Analyzer {
         this.isDragging = false;    // Status für das Ziehen (Pan / Scroll)
         this.activeKeys = {};       // Erkennt ob 'a' oder 'b' und die Pfeiltasten gedrückt gehalten wird
         this.activeKey = null;      // Erkennt ob 'a' oder 'b' gedrückt gehalten wird
-        this.additionalKey = null;  // Erkennt weitere Tasten
-        this.numberOfKeys = 0;      // Anzahl gedrückter Tasten
         this.markerA = 40;          // Marker-Positionen in Mikrosekunden (µs). null bedeutet nicht gesetzt.
         this.markerB = 160;         // Marker-Positionen in Mikrosekunden (µs). null bedeutet nicht gesetzt.
-
     }
 
-   aaaaaaaa /**
+    /**
      * 
      * @returns 
      */
