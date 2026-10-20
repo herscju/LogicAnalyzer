@@ -1,9 +1,6 @@
 import AdvancedAnalyzer from "./AdvancedAnalyzer.js"
 import Analyzer from "./Analyzer.js";
 
-const signalData = [];
-
-// --- 2. Mehrkanal-Testdaten generieren (Einheit: Mikrosekunden µs) ---
 // Kanal-Definitionen
 const channels = [
     { "name": "CH1: CLK (Clock)", "color": Analyzer.SIGNAL_COLOR, "data": [] },
@@ -12,12 +9,8 @@ const channels = [
 ];
 
 // Daten generieren
-let t1 = 0;
-let t2 = 0;
-let t3 = 0;
 let s1 = 0;
 let s2 = 0;
-let s3 = 1;
 
 for (let i = 0; i < 300; i++) {
     // CH1: Konstanter schneller Takt (z.B. alle 10µs Flanke)
