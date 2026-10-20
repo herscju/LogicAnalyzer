@@ -5,31 +5,12 @@ import Analyzer from "./Analyzer.js"
 
 export default class SimpleAnalyzer extends Analyzer {
 
-    canvas = null;
-    context = null;
-
-    input = [
-        { state: 0, duration: 50 },
-        { state: 1, duration: 30 },
-        { state: 0, duration: 20 },
-        { state: 1, duration: 60 },
-        { state: 0, duration: 40 },
-        { state: 1, duration: 10 },
-        { state: 0, duration: 80 },
-        { state: 1, duration: 40 }
-    ];
-
-    startX = 0;
-    zoomX = 0;
-    offsetX = 0;
-    isDragging = false;
-
     /**
      * 
      */
     constructor() {
         super();
-        
+
         this.startX = 0;            // Status für das Ziehen (Pan / Scroll)
         this.zoomX = 2.0;           // Streckungsfaktor auf der X-Achse
         this.offsetX = 20.0;        // Horizontaler Versatz (Scroll-Position in Pixeln)
@@ -38,27 +19,8 @@ export default class SimpleAnalyzer extends Analyzer {
 
     /**
      * 
-     * @param {*} id 
      * @returns 
      */
-    setCanvasId(id) {
-        this.canvas = document.getElementById(id);
-        this.context = this.canvas.getContext('2d');
-
-        return this;
-    }
-
-    /**
-     * 
-     * @param {*} input 
-     * @returns 
-     */
-    setInput(input) {
-        this.input = (input) ? input : this.input;
-
-        return this;
-    }
-
     addEventHandler() {
         if (!this.canvas && !this.context) {
             return;
@@ -131,7 +93,7 @@ export default class SimpleAnalyzer extends Analyzer {
         this.context.clearRect(0, 0, canvasWidth, canvasHeight);
 
         // Dynamische Gitterlinien (Skalieren und scrollen mit dem Zoom mit)
-        this.context.strokeStyle = '#d61717';
+        this.context.strokeStyle = Analyzer.GRID_COLOR;
         this.context.lineWidth = 1;
 
         const gridSize = 50 * this.zoomX;
@@ -144,14 +106,15 @@ export default class SimpleAnalyzer extends Analyzer {
         }
 
         // Null-Linie / Achse anzeigen
-        this.context.strokeStyle = '#00ff66';
+        this.context.strokeStyle = Analyzer.XAXIS_COLOR;
+        this.context.lineWidth = 1;
         this.context.beginPath();
         this.context.moveTo(0, yLow);
         this.context.lineTo(canvasWidth, yLow);
         this.context.stroke();
 
         // Signalpfad zeichnen
-        this.context.strokeStyle = '#00ff66';
+        this.context.strokeStyle = Analyzer.SIGNAL_COLOR;
         this.context.lineWidth = 2.5;
         this.context.beginPath();
 
@@ -181,6 +144,8 @@ export default class SimpleAnalyzer extends Analyzer {
         }
 
         this.context.stroke();
+
+        return this;
     }
 
 }

@@ -16,17 +16,22 @@
 </head>
 
 <body>
+    <h1>JavaScript Logic Analyzer</h1>
     <div class="container">
-        <h3>Multi-Channel Logic Analyzer UI</h3>
-
+        <h2>Multi-Channel Logic Analyzer UI</h2>
         <div class="controls-info">
-            <div>🖱️ <span class="shortcut">Mausrad:</span> Zeitachse zoomen | <span class="shortcut">Klicken &
-                    Ziehen:</span> Scrollen</div>
-            <div>⌨️ <span class="shortcut">Taste [A] oder [B] + Klick:</span> Marker setzen</div>
+            <div class="info">
+                <p>🖱️ <span class="shortcut">Mausrad:</span> Zeitachse zoomen | <span class="shortcut">Klicken & Ziehen:</span> Scrollen</p>
+            </div>
+            <div class="info">
+                <p>⌨️ <span class="shortcut">Taste [A] oder [B] + Mausklick:</span> Marker setzen</p>
+                <p>⌨️ <span class="shortcut">Taste [A] oder [B] + Pfeiltaste links / rechts:</span> Marker verschieben
+                </p>
+            </div>
         </div>
 
         <!-- Canvas mit fester Auflösung für scharfe Renderings -->
-        <canvas id="analyzerCanvas" width="1000" height="350"></canvas>
+        <canvas id="analyzerCanvas" width="1000" height="400"></canvas>
 
         <div class="measurements">
             <div class="meas-box active-a">
@@ -48,7 +53,7 @@
         </div>
     </div>
 
-    <script src="./js/professional.js" type="module"></script>
+    <script src="./js/advanced.js" type="module"></script>
 </body>
 
 </html>
